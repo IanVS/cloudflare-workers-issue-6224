@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "cd .dist && pnpm wrangler pages deploy build/",
+    "reproduce": "pnpm install && pnpm build && pnpm run deploy"
   },
   "dependencies": {
     "react": "^18.3.1",
